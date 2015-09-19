@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="layout.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page">
+      <h1>Simple HTML Pre-viewer</h1>
+      <div class="container">
+        <textarea id="inputTextArea" class="formatter__input__textarea"></textarea>
+      </div>
+      <div class="container">
+        <div id="outputTextArea" class="formatter__output__textarea">
+           text will appear here
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  $("#inputTextArea").on('change keyup paste', function() {
+      var text = $("#inputTextArea").val();
+
+      $("#outputTextArea").html(text);
+
+    });
+  </script>
+</html>
